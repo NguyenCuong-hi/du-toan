@@ -1,0 +1,60 @@
+[
+    {
+        "name": "Setup",
+        "to": "/setup",
+        "icon": "sliders",
+        "hasChildren": true,
+        "items": [
+            {
+                "name": "Setup",
+                "route": "/setup",
+                "icon": "sliders"
+
+            },
+            {
+                "name": "Workspace",
+                "route": "/workspace",
+                "icon": "grid"
+            },
+            { 
+                "name": "Organization", 
+                "to": "/employees?tab=org", 
+                "icon": "grid"
+            }
+        ]
+    },
+    {
+        "name": "HRM",
+        "to": "/hrm",
+        "icon": "users",
+        "hasChildren": true,
+        "items": [
+            {
+                "name": "Organization", 
+                "to": "/employees?tab=org", 
+                "icon": "grid"
+            },
+            {
+                "name": "Employees", 
+                "to": "/employees?tab=emp", 
+                "icon": "grid"
+            },
+            {
+                "name": "Departments", 
+                "to": "/employees?tab=dep", 
+                "icon": "grid"
+            },
+            {
+                "name": "Recruitment", 
+                "to": "/recruitment", 
+                "icon": "grid"
+            },
+            {
+                "name": "Payroll", 
+                "to": "/payroll", 
+                "icon": "grid"
+            }
+        ]
+    }
+            
+]

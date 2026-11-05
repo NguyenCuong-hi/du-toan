@@ -1,0 +1,373 @@
+@import './assets/Inter/inter.css';
+@import 'frappe-ui/src/style.css';
+
+/* ==========================================================================
+   Espresso Design Tokens (Frappe Desk v15 / v16 Design System)
+   Native CSS custom properties converted from Espresso source of truth.
+   ========================================================================== */
+
+:root,
+[data-theme="light"] {
+  /* --- Raw Color Palette --- */
+  --gray-50: #f8f8f8;
+  --gray-100: #f3f3f3;
+  --gray-200: #ededed;
+  --gray-300: #e2e2e2;
+  --gray-400: #c7c7c7;
+  --gray-500: #999999;
+  --gray-600: #7c7c7c;
+  --gray-700: #525252;
+  --gray-800: #383838;
+  --gray-900: #171717;
+  --gray-950: #0f0f0f;
+
+  --blue-50: #f1f8fe;
+  --blue-100: #e6f4ff;
+  --blue-200: #d1eaff;
+  --blue-300: #b5ddfd;
+  --blue-400: #61afef;
+  --blue-500: #0d8ef8;
+  --blue-600: #077ddf;
+  --blue-700: #0375d3;
+  --blue-800: #005cad;
+  --blue-900: #004880;
+  --blue-950: #032e63;
+
+  --green-50: #f0faf3;
+  --green-100: #e4faeb;
+  --green-200: #bdefcc;
+  --green-300: #a8e6be;
+  --green-400: #7edaa1;
+  --green-500: #43ac79;
+  --green-600: #268c5c;
+  --green-700: #14804d;
+  --green-800: #075e35;
+  --green-900: #173b2c;
+  --green-950: #0a3020;
+
+  --red-50: #fff5f5;
+  --red-100: #ffe7e7;
+  --red-200: #ffd8d8;
+  --red-300: #fdc2c2;
+  --red-400: #f79596;
+  --red-500: #e03434;
+  --red-600: #ce2c2c;
+  --red-700: #b41d1d;
+  --red-800: #941f1f;
+  --red-900: #6b1515;
+  --red-950: #4c0d0d;
+
+  --amber-50: #fdf8ed;
+  --amber-100: #fff4d3;
+  --amber-200: #f6eac0;
+  --amber-300: #f3e3b4;
+  --amber-400: #f4cd80;
+  --amber-500: #df9311;
+  --amber-600: #ca7e0c;
+  --amber-700: #bb6f0c;
+  --amber-800: #91400d;
+  --amber-900: #763813;
+  --amber-950: #4e2209;
+
+  --purple-50: #f8f3fb;
+  --purple-100: #f6e9ff;
+  --purple-200: #ecd3ff;
+  --purple-300: #e2b9fc;
+  --purple-400: #bf78fa;
+  --purple-500: #9c45e3;
+  --purple-600: #8e49ca;
+  --purple-700: #6e399d;
+  --purple-800: #5c2f83;
+  --purple-900: #401863;
+  --purple-950: #2d084e;
+
+  --white: #ffffff;
+  --black: #000000;
+
+  /* --- Semantic Surfaces (Solid Opaque Values) --- */
+  --surface-base: #ffffff;
+  --surface-gray-1: #f8f8f8;
+  --surface-gray-2: #f3f3f3;
+  --surface-gray-3: #ededed;
+  --surface-gray-4: #e2e2e2;
+  --surface-gray-5: #c7c7c7;
+  --surface-sidebar: #ffffff;
+  --surface-elevation-1: #ffffff;
+  --surface-elevation-2: #ffffff;
+  --surface-elevation-3: #ffffff;
+
+  --surface-blue-1: #f1f8fe;
+  --surface-blue-2: #e6f4ff;
+  --surface-green-1: #f0faf3;
+  --surface-green-2: #e4faeb;
+  --surface-red-1: #fff5f5;
+  --surface-red-2: #ffe7e7;
+  --surface-amber-1: #fdf8ed;
+  --surface-amber-2: #fff4d3;
+  --surface-purple-1: #f8f3fb;
+  --surface-purple-2: #f6e9ff;
+
+  /* --- Semantic Inks (Text & Icons) --- */
+  --ink-base: #ffffff;
+  --ink-gray-1: #ededed;
+  --ink-gray-2: #e2e2e2;
+  --ink-gray-3: #c7c7c7;
+  --ink-gray-4: #999999;
+  --ink-gray-5: #7c7c7c;
+  --ink-gray-6: #525252;
+  --ink-gray-7: #383838;
+  --ink-gray-8: #171717;
+  --ink-gray-9: #0f0f0f;
+
+  --ink-blue-1: #ffffff;
+  --ink-blue-7: #077ddf;
+  --ink-blue-8: #0375d3;
+  --ink-green-7: #268c5c;
+  --ink-green-8: #14804d;
+  --ink-red-7: #ce2c2c;
+  --ink-red-8: #b41d1d;
+  --ink-amber-7: #ca7e0c;
+  --ink-amber-8: #bb6f0c;
+  --ink-purple-7: #8e49ca;
+  --ink-purple-8: #6e399d;
+
+  /* --- Semantic Outlines (Borders) --- */
+  --outline-base: #ffffff;
+  --outline-gray-1: #ededed;
+  --outline-gray-2: #e2e2e2;
+  --outline-gray-3: #c7c7c7;
+  --outline-gray-4: #999999;
+  --outline-gray-8: #171717;
+  --outline-blue-2: #d1eaff;
+  --outline-green-2: #bdefcc;
+  --outline-red-2: #ffd8d8;
+  --outline-amber-2: #f6eac0;
+
+  /* --- Radii (Espresso canonical scale) --- */
+  --radius-0: 0px;
+  --radius-1: 4px;
+  --radius-2: 5px;
+  --radius-3: 6px;
+  --radius-4: 8px;
+  --radius-5: 10px;
+  --radius-6: 12px;
+  --radius-7: 16px;
+  --radius-8: 20px;
+  --radius-full: 9999px;
+  --radius-sm: 4px;
+  --radius: 8px;
+  --radius-md: 10px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-2xl: 20px;
+
+  /* --- Elevations / Box Shadows (Espresso canonical scale) --- */
+  --elevation-sm: inset 0px 0.25px 1.5px 0px #ffffff29, 0px 0px 1px 0px #00000033, 0px 1px 3px 0px #00000024;
+  --elevation-base: inset 0px 0.25px 1.5px 0px #ffffff29, 0px 0px 1.5px 0px #00000029, 0px 2px 5px 0px #00000024;
+  --elevation-md: inset 0px 0.25px 1.5px 0px #ffffff29, 0px 0px 1.5px 0px #00000026, 0px 0px 6px 2px #0000000a, 0px 6px 12px -2px #00000014;
+  --elevation-lg: inset 0px 0.25px 1.5px 0px #ffffff29, 0px 0px 1.5px 0px #0000002e, 0px 0px 6px 3px #00000008, 0px 18px 22px -6px #0000001a;
+  --elevation-xl: inset 0px 0.25px 1.5px 0px #ffffff29, 0px 0px 1px 0px #00000033, 0px 0px 10px 2px #0000000a, 0px 24px 30px -8px #0000001a;
+  --elevation-2xl: inset 0px 0.25px 2px 0px #ffffff29, 0px 0px 1.5px 0px #00000040, 0px 0px 10px 2px #00000008, 0px 44px 52px -10px #0000001a;
+
+  --shadow-sm: var(--elevation-sm);
+  --shadow: var(--elevation-base);
+  --shadow-md: var(--elevation-md);
+  --shadow-lg: var(--elevation-lg);
+  --shadow-xl: var(--elevation-xl);
+  --shadow-2xl: var(--elevation-2xl);
+
+  /* --- Focus Rings --- */
+  --focus-default: 0px 0px 0px 2px #c9c9c9e5;
+  --focus-outline-default: 2px solid #c9c9c9e5;
+  --focus-blue: 0px 0px 0px 2px #65b9fce5;
+
+  /* --- Typography Font Weights & Sizes --- */
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-weight-regular: 420;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  --text-2xs: 11px;
+  --text-xs: 12px;
+  --text-sm: 13px;
+  --text-base: 14px;
+  --text-lg: 16px;
+  --text-xl: 18px;
+  --text-2xl: 20px;
+  --text-3xl: 24px;
+}
+
+[data-theme="dark"] {
+  --surface-base: #171717;
+  --surface-gray-1: #0f0f0f;
+  --surface-gray-2: #242424;
+  --surface-gray-3: #2e2e2e;
+  --surface-sidebar: #171717;
+  --ink-gray-8: #f3f3f3;
+  --ink-gray-9: #ffffff;
+  --outline-gray-1: #2e2e2e;
+  --outline-gray-2: #383838;
+}
+
+/* ==========================================================================
+   Global Base Styling
+   ========================================================================== */
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--surface-gray-1);
+  color: var(--ink-gray-8);
+  font-weight: var(--font-weight-regular);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ==========================================================================
+   Espresso Component Primitives (Solid Opaque Backgrounds, No Liquid)
+   ========================================================================== */
+
+/* Cards: Solid White */
+.espresso-card {
+  background-color: #ffffff;
+  border: 1px solid var(--outline-gray-1);
+  border-radius: var(--radius-xl);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.espresso-card-elevated {
+  background-color: #ffffff;
+  border: 1px solid var(--outline-gray-1);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--elevation-base);
+}
+
+/* Sidebar Standard Item */
+.espresso-sidebar-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 10px;
+  margin-bottom: 2px;
+  border-radius: var(--radius-4);
+  font-size: var(--text-sm);
+  color: var(--ink-gray-7);
+  background-color: #ffffff;
+  transition: all 0.15s ease;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.espresso-sidebar-item:hover {
+  background-color: var(--surface-gray-2);
+  color: var(--ink-gray-9);
+}
+
+.espresso-sidebar-item.active,
+.espresso-sidebar-item.selected {
+  background-color: var(--surface-gray-2);
+  color: var(--ink-gray-9);
+  font-weight: var(--font-weight-medium);
+}
+
+/* Buttons: Solid Opaque Backgrounds */
+.espresso-btn-primary {
+  background-color: #171717;
+  color: #ffffff;
+  font-size: var(--text-xs);
+  font-weight: var(--font-weight-medium);
+  padding: 6px 14px;
+  border-radius: var(--radius-4);
+  border: 1px solid transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.15s ease;
+}
+
+.espresso-btn-primary:hover {
+  background-color: #000000;
+}
+
+.espresso-btn-secondary {
+  background-color: #ffffff;
+  color: var(--ink-gray-8);
+  font-size: var(--text-xs);
+  font-weight: var(--font-weight-medium);
+  padding: 6px 12px;
+  border-radius: var(--radius-4);
+  border: 1px solid var(--outline-gray-2);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s ease;
+}
+
+.espresso-btn-secondary:hover {
+  background-color: var(--surface-gray-2);
+  border-color: var(--outline-gray-3);
+}
+
+.espresso-btn-ghost {
+  background-color: #ffffff;
+  color: var(--ink-gray-7);
+  font-size: var(--text-xs);
+  font-weight: var(--font-weight-medium);
+  padding: 6px 10px;
+  border-radius: var(--radius-4);
+  border: 1px solid var(--outline-gray-1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s ease;
+}
+
+.espresso-btn-ghost:hover {
+  background-color: var(--surface-gray-2);
+  color: var(--ink-gray-9);
+}
+
+/* Badges / Status Pills: Solid Opaque Backgrounds */
+.espresso-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+  font-size: var(--text-2xs);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.02em;
+}
+
+.espresso-badge-gray {
+  background-color: var(--surface-gray-2);
+  color: var(--ink-gray-7);
+}
+
+.espresso-badge-blue {
+  background-color: var(--surface-blue-1);
+  color: var(--ink-blue-7);
+  border: 1px solid var(--outline-blue-2);
+}
+
+.espresso-badge-green {
+  background-color: var(--surface-green-1);
+  color: var(--ink-green-7);
+  border: 1px solid var(--outline-green-2);
+}
+
+.espresso-badge-amber {
+  background-color: var(--surface-amber-1);
+  color: var(--ink-amber-7);
+  border: 1px solid var(--outline-amber-2);
+}
+
+.espresso-badge-red {
+  background-color: var(--surface-red-1);
+  color: var(--ink-red-7);
+  border: 1px solid var(--outline-red-2);
+}
+
+.espresso-badge-purple {
+  background-color: var(--surface-purple-1);
+  color: var(--ink-purple-7);
+}
